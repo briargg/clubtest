@@ -1,0 +1,187 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Fuente moderna */
+    background-color: #f0f0f5; /* Fondo suave */
+    color: #333; /* Color de texto oscuro */
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #e50000; /* Rojo Coca-Cola */
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 0.3s, color 0.3s; /* Transición suave */
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Efecto de aumento */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 20px; /* Espaciado entre elementos */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative; /* Para efectos de subrayado */
+    transition: color 0.3s; /* Transición suave */
+}
+
+.nav-links a:hover {
+    color: #ffe6e6; /* Color más claro en hover */
+}
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1); /* Efecto de subrayado */
+}
+
+/* Menú Desplegable */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0; /* Espaciado entre líneas */
+    transition: all 0.3s ease; /* Transición suave para el menú */
+}
+
+/* Main Content */
+main {
+    padding: 40px 20px; /* Espacio para contenido */
+    max-width: 1200px; /* Ancho máximo */
+    margin: auto; /* Centrado */
+    background: white; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra más prominente */
+}
+
+h1, h2 {
+    color: #e50000; /* Rojo Coca-Cola */
+    margin-bottom: 20px; /* Espacio debajo de títulos */
+}
+
+section {
+    margin-bottom: 60px; /* Espacio inferior mayor para secciones */
+    padding: 20px; /* Espacio interno */
+    border-radius: 8px; /* Bordes redondeados */
+    background: #f9f9f9; /* Fondo ligeramente gris */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+button {
+    background-color: #e50000; /* Rojo Coca-Cola */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones para botones */
+}
+
+button:hover {
+    background-color: #cc0000; /* Sombra más oscura en hover */
+    transform: scale(1.05); /* Efecto de aumento */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #e50000; /* Rojo Coca-Cola */
+    color: white;
+    margin-top: 40px; /* Espacio superior para el pie de página */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #e50000; /* Rojo Coca-Cola */
+        top: 70px;
+        right: 0;
+        width: 100%;
+        z-index: 1;
+        padding: 10px 0; /* Espaciado para el menú desplegable */
+        border-radius: 0 0 10px 10px; /* Bordes redondeados en la parte inferior */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        text-align: center;
+    }
+}
+
+/* Animación del Menú Toggle */
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0; /* Ocultar la línea central */
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg); /* Rotación para el efecto "X" */
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg); /* Rotación para el efecto "X" */
+}

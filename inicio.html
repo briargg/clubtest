@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles2.css">
+    <title>Club Almacén</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Club Almacén</div>
+    <nav>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#almacenes">Almacenes</a></li>
+            <li><a href="#register">Registrarse</a></li>
+            <li><a href="#credits">Créditos</a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Bienvenido a Club Almacén</h1>
+            <p>Encuentra los mejores almacenes, verdulerías, carnicerías y farmacias cercanas a ti.</p>
+        </section>
+
+        <section id="almacenes">
+            <h2>Localiza tus comercios</h2>
+            <button id="location-button">Buscar Comercios Cercanos</button>
+            <div id="results"></div>
+        </section>
+
+        <section id="register">
+            <h2>Generar Usuario</h2>
+            <form id="registration-form">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo Electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit">Registrar</button>
+            </form>
+        </section>
+
+        <section id="credits">
+            <h2>Acceso a Créditos Especiales</h2>
+            <p>Consulta tus patrones de compra y aprovecha nuestros créditos especiales.</p>
+            <button id="credit-info-button">Ver Mis Créditos</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Club Almacén. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script2.js"></script>
+</body>
+</html>

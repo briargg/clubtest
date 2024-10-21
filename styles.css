@@ -1,0 +1,167 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Color de fondo claro */
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #d32f2f, #c62828); /* Degradado rojo moderno */
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    height: 110px; /* Tamaño del logo */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffeb3b; /* Color de resaltado */
+}
+
+header .header-actions button {
+    background-color: #fff;
+    color: #d32f2f; /* Rojo oscuro */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .header-actions button:hover {
+    background-color: #d32f2f; /* Rojo oscuro */
+    color: #fff;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.register-section, .token-section {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 40px;
+    transition: transform 0.3s;
+}
+
+.register-section:hover, .token-section:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    color: #d32f2f; /* Rojo oscuro */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    margin: 10px 0 5px;
+    display: block;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #d32f2f; /* Rojo oscuro */
+}
+
+button {
+    background-color: #d32f2f; /* Rojo oscuro */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #b71c1c; /* Rojo más oscuro */
+    transform: translateY(-2px);
+}
+
+#token-info {
+    margin-top: 20px;
+}
+
+#token-info p {
+    font-size: 1.2em;
+    color: #d32f2f; /* Rojo oscuro */
+}
+
+/* Footer */
+footer {
+    background-color: #d32f2f; /* Rojo oscuro */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffeb3b; /* Color de resaltado */
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    height: 30px;
+}
